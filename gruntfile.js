@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 				}
 			},
 			hbs: {
-				files: ['_layout/*.hbs', 'layout/**/*.hbs'],
+				files: ['_layout/*.hbs', '_layout/**/*.hbs'],
 				tasks: ['assemble'],
 				options: {
 					spawn: false
