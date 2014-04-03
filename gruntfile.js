@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 			dist: {
 				options: [{
 					sassDir: '_sass',
-					cssDir: 'public/assets/css/',
+					cssDir: './public/assets/css/',
 					enviroment: 'development',
 					trace: true
 				}]
