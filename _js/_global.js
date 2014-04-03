@@ -1,4 +1,4 @@
-var gannetResidence = (function($){
+var boilerplateGlobal = (function($){
 	var init = function(){
 		console.log('global');
 	};
@@ -9,4 +9,4 @@ var gannetResidence = (function($){
 
 })(jQuery);
 
-gannetResidence.init();
+boilerplateGlobal.init();
