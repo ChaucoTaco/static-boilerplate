@@ -1,0 +1,20 @@
+// REM font-size mixing as per Chris Coyer (http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/)
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+//vertical align mixin as per Sebastian Ekström (http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin visually-hidden{
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}

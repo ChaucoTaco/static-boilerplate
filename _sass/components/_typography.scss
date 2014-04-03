@@ -1,0 +1,81 @@
+body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	p {
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 150%;
+}
+
+h1 { @include font-size($h1); }
+h2 { @include font-size($h2); }
+h3 { @include font-size($h3); }
+h4 { @include font-size($h4); }
+h5 { @include font-size($h5); }
+
+p {
+	@include font-size($h4);
+	line-height: 150%;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+
+	&.indent {
+		text-indent: 2em;
+	}
+}
+
+a {
+	color: $link-base-blue;
+	text-decoration: underline;
+
+	&:visited {
+		text-decoration: underline;
+	}
+
+	//hover only works on non-touch devices to prevent having to double click anchors.
+	&:hover {
+		.no-touch & {
+			border-bottom: none;
+		}
+	}
+
+	&:active, &:focus {
+		color: $link-active-blue;
+	}
+}
+
+strong	{ font-weight: bold; }
+em		{ font-style: italic; }
+
+blockquote {
+	@include font-size($h2);
+	background: #f9f9f9;
+	border-left: 10px solid $accent-gray;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	@include font-size($h2 * 2);
+	color: $accent-gray;
+	content: open-quote;
+	line-height: 0.1em;
+	margin-right: 10px;
+	vertical-align: -0.25em;
+}
+blockquote p {
+	display: inline;
+}
