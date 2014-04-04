@@ -3,12 +3,13 @@ Static File Boilerplate
 
 Components
 ----------
-+ Assemble
-	+ Handlebars
-+ Grunt
-	+ Node
-+ Compass
-	+ Sass
++ [Handlebars](http://handlebarsjs.com/)
+	+ [Assemble](assemble.io)
++ [Node](http://nodejs.org/)
+	+ [Grunt](compass-style.org)
++ [Sass](http://sass-lang.com/)
+	+ [Compass](compass-style.org)
+	+ [Font-Awesome](http://fortawesome.github.io/)
 
 Install
 ----------
