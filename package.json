@@ -1,5 +1,5 @@
 {
-  "name": "Static Boilerplate",
+  "name": "StaticBoilerplate",
   "version": "0.0.1",
   "description": "Static page Boilerplate using Assemble",
   "main": "gruntfile.js",
