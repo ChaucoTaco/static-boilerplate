@@ -14,7 +14,20 @@
 }
 
 @mixin visually-hidden{
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+//svg background mixin as per Les James (http://forrst.com/posts/Sass_Compass_Mixin_for_SVG_Background_Image_Fall-dWn)
+
+$imgUrl: "/assets/img/";
+
+@mixin no-svg {
+  .no-svg & { @content }
+}
+
+@mixin svg-background($filename, $extension: '.png') {
+    background-image: url($imgUrl + ($filename + '.svg'));
+    @include no-svg { background-image: url($imgUrl + ($filename + $extension)); }
 }
