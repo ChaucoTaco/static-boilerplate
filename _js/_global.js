@@ -1,6 +1,16 @@
 var boilerplateGlobal = (function($){
+
+	var $navButton = $('.nav-button'),
+		$nav = $('nav');
+
 	var init = function(){
-		console.log('global');
+		bindEvents();
+	},
+
+	bindEvents = function() {
+		$navButton.on('click', function(){
+			$nav.toggleClass('opened-nav');
+		});
 	};
 
 	return {
