@@ -19,6 +19,12 @@ nav {
 	.opened-nav & {
 		@include transform(scale(1));
 		@include border-radius(50%);
+
+		.nav-1 { @include transform(rotate(-10deg) skew(50deg)); }
+		.nav-2 { @include transform(rotate( 30deg) skew(50deg)); }
+		.nav-3 { @include transform(rotate( 70deg) skew(50deg)); }
+		.nav-4 { @include transform(rotate( 110deg) skew(50deg)); }
+		.nav-5 { @include transform(rotate( 150deg) skew(50deg)); }
 	}
 }
 
@@ -68,7 +74,8 @@ nav {
 .nav-buttons li {
 	font-size: 1.5em;
 	@include transform-origin(100% 100% 0);
-	@include transition(border .3s ease);
+	@include transition(all .3s ease .2s);
+	@include transform(rotate(0) skew(50deg));
 	height: 10em;
 	left: 50%;
 	margin-left: -10em;
@@ -100,12 +107,6 @@ nav {
 			font-size: 1.1em;
 		}
 	}
-
-	&.nav-1 { @include transform(rotate(-10deg) skew(50deg)); }
-	&.nav-2 { @include transform(rotate( 30deg) skew(50deg)); }
-	&.nav-3 { @include transform(rotate( 70deg) skew(50deg)); }
-	&.nav-4 { @include transform(rotate( 110deg) skew(50deg)); }
-	&.nav-5 { @include transform(rotate( 150deg) skew(50deg)); }
 
 	&:nth-child(odd) a {
 		background-color: #a11313;
